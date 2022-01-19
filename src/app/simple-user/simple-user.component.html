@@ -1,0 +1,64 @@
+<p>simple-user works!</p>
+
+<header>
+    <input type="submit" value="login" (click)="gotologin()">
+</header>
+
+<div class="backimg">
+    <h1 style="color:aqua">
+        Welcome To The RK Quiz test
+    </h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 style="color:blueviolet">
+        Enter your email to start your quiz .
+    </h2>
+
+    <form style="color:darkgreen;" class="contactForm" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+
+        <p>
+            <label for="firstname">User Name</label>
+            <input type="text" name="firstname" Required ngModel>
+        </p>
+
+
+
+        <p>
+            <label for="email">Email </label>
+            <input type="text" id="email" name="email" required ngModel>
+        </p>
+        <p>
+            <label for="password">Password </label>
+            <input type="text" id="password" name="password" required ngModel>
+        </p>
+
+
+        <!-- <fieldset>
+            <legend>marriege stats</legend>
+            <p>
+                <label for="married">married</label>
+                <input type="radio" value="married" name="married" Required ngModel> Married
+                <input type="radio" value="single" name="married" ngModel Required> single
+            </p>
+        </fieldset> -->
+        <!-- <p>
+            Date of attemp:<input type="date" name="date_of_attemp" id="date_of_attemp">
+        </p>
+        <label for="country">Country</label>
+        <select name="country" ngModel>
+      <option [ngValue]="c.id" *ngFor="let c of countryList">
+        {{c.name}}
+      </option>
+    </select> -->
+
+        <p>
+            <button type="submit">Register user</button>
+        </p>
+
+    </form>
+
+
+</div>

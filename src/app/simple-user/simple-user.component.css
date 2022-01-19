@@ -1,0 +1,13 @@
+div.backimg {
+    height: 730px!important;
+    background-image: url(../../assets/2015350.jpg);
+    background-position: center;
+}
+
+form.contactform {
+    color: aquamarine!important;
+}
+
+header input {
+    color: white !important;
+}

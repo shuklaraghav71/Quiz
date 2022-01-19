@@ -1,0 +1,36 @@
+<p style=color:red>admin form works!</p>
+<form #AdminForm="ngForm" (ngSubmit)="onlogin(AdminForm)">
+    <input type="email" name="email" ngModel placeholder="Email"><br>
+    <input type="password" name="password" ngModel placeholder="password"><br>
+    <input type="submit" value="Submit">
+</form>
+<br>
+<br>
+<br>
+<form #QuizForm="ngForm" (ngSubmit)="onsubmit(QuizForm)" *ngIf="isAdmin==true">
+    <input type="text" name="Que" ngModel placeholder="Que"><br>
+    <input type="text" name="Qpt1" ngModel placeholder="Qpt1"><br>
+    <input type="text" name="Qpt2" ngModel placeholder="Qpt2"><br>
+    <input type="text" name="Qpt3" ngModel placeholder="Qpt3"><br>
+    <input type="text" name="Qpt4" ngModel placeholder="Qpt4"><br>
+    <input type="text" name="Ans" ngModel placeholder="Ans"><br>
+    <input type="submit" value="Submit"><br>
+</form>
+<form>
+
+    <button (click)="getquefromdb()">start Quiz </button>
+</form>
+
+<!-- //4 radio , 1 submit, 1 li -->
+<div style="color:white" *ngIf="this.quesFromdb &&  isSimpleUser">
+    <p>{{obj.que}}</p> your score{{scoreboard}}
+    <input [(ngModel)]="que" type="radio" [value]="obj.opt1" [name]="obj.que">{{obj.opt1}}
+    <input [(ngModel)]="que" type="radio" [value]="obj.opt2" [name]="obj.que">{{obj.opt2}}
+    <input [(ngModel)]="que" type="radio" [value]="obj.opt3" [name]="obj.que">{{obj.opt3}}
+    <input [(ngModel)]="que" type="radio" [value]="obj.opt4" [name]="obj.que">{{obj.opt4}} {{que}}
+    <button title="submit answer" (click)="onNext(obj.que)">next</button>
+
+
+
+
+</div>
